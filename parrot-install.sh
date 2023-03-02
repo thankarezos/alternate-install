@@ -51,11 +51,11 @@ function headless_install() {
 }
 
 function security_install() {
-	apt --allow-downgrades install -y parrot-interface parrot-interface-full parrot-mate parrot-tools-full parrot-drivers parrot-crypto parrot-privacy parrot-devel firefox
+	apt --allow-downgrades install -y parrot-interface parrot-interface-full parrot-mate parrot-tools-full parrot-drivers
 }
 
 function home_install() {
-	apt --allow-downgrades install -y parrot-interface parrot-interface-full parrot-mate parrot-drivers parrot-privacy firefox vscodium zeal
+	apt --allow-downgrades install -y parrot-interface parrot-interface-full parrot-mate parrot-drivers vscodium zeal
 }
 
 function embedded_install() {
