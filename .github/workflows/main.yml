@@ -41,7 +41,8 @@ jobs:
           port: 1313
           key: ${{ secrets.SERVER_KEY }}
           script: |
-            chgrp -R Educator /home/educator/Dockerize/deployment/*
+            chgrp -R Educator /home/educator/Dockerize/deployment/wwwroot
+            chgrp -R Educator /home/educator/Dockerize/deployment/server
             bash -ic 'adopse restart'
 
             
