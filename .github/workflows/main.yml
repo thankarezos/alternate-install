@@ -24,6 +24,12 @@ jobs:
           source: 'test'
           target: '/home/educator/Dockerize/deployment'
           args: '-P 1313'
-      - name: Change group of copied files
-        run: |
-          ssh educator@${{ secrets.SERVER_HOST }} -p 1313 "chgrp -R Educator /home/educator/Dockerize/deployment/test"
+      - name: Change Group 
+        uses: invi5H/ssh-action@v1.0.0
+        with:
+          SSH_USER: educator
+          SSH_HOST: ${{ secrets.SERVER_HOST }}
+          SSH_PORT: 1313
+          SSH_KEY: ${{ secrets.SERVER_KEY }}
+          script: |
+            chgrp -R Educator /home/educator/Dockerize/deployment/*
