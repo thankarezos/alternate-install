@@ -10,3 +10,4 @@ chmod +x parrot-install.sh
 bash parrot-install.sh
 ```
 Note: Run everything under **root** permissions.
+dwa
