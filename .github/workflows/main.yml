@@ -23,4 +23,7 @@ jobs:
           key: ${{ secrets.SERVER_KEY }}
           source: 'test'
           target: '/home/educator/Dockerize/deployment'
-          args: '-r -P 1313'
+          args: '-P 1313'
+      - name: Change group of copied files
+        run: |
+          ssh educator@${{ secrets.SERVER_HOST }} -p 1313 "chgrp -R Educator /home/educator/Dockerize/deployment/test"
