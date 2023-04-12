@@ -2,10 +2,10 @@ name: Build React
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
